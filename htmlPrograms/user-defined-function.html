@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+
+        function greet(){
+            alert("Hello! welcome to JavaScript functions.");
+        }
+        //greet();
+
+        function addNumbers(a, b) {
+            var sum = a + b;
+            alert("The sum of two numbers in head script is: " + sum);
+        }
+
+        function checkLoginDetails(email,password){
+            if(email=="admin@gmail.com" && password=="admin123"){
+                return("Login successful!");
+        } else {
+                return("Invalid email or password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <script type="text/JavaScript">
+        greet();
+
+        var userEmail = prompt("Please enter your email:");
+        var userPassword = prompt("Please enter your password:");
+        var loginResult = checkLoginDetails(userEmail, userPassword);
+        alert(loginResult);
+
+        // var a = eval(prompt("Please enter two numbers to add. First number is :"));
+        // var b = eval(prompt("Second number is :"));
+        // addNumbers(a, b);
+        // addNumbers(5, 10);
+        // addNumbers(20, 30);
+    </script>
+    
+</body>
+</html>
