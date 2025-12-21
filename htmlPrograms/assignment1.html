@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/JavaScript">
+        // var con;
+        // do{
+        //     //con = prompt("Do you want to continue?");
+        //     con = confirm("Do you want to continue?");
+        // }while(con);
+        // alert("You chose to stop.");
+
+        var con;
+        var a,b,sum,sub;
+        do{
+        alert ("Welcome to the calculator! 1 is addition, 2 is subtraction.");
+        var choice = prompt("1: Addition, 2: Subtraction. Enter your choice:");
+        switch(eval(choice)){
+            case 1:var a = prompt("Enter value of a:");
+                var b = prompt("Enter value of b:");
+                sum = eval(a) + eval(b);
+                alert("The sum of a and b is: " + sum);
+                break;
+            case 2:
+                var a = prompt("Enter value of a:");
+                var b = prompt("Enter value of b:");
+                sub = eval(a) - eval(b);
+                alert("The difference of a and b is: " + sub);
+                break;
+            default:alert("Invalid choice.");
+            break;
+        } con = confirm("Do you want to perform another calculation?");
+    }while(con);
+    alert("Thank you for using the calculator. Goodbye!");
+    </script>
+    
+</body>
+</html>
