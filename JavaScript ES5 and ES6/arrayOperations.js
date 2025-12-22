@@ -19,17 +19,35 @@
 
 
 //splice methode helps to add or remove elements from specific index position
-let num4=[100,200,300,400,500,600];
-console.log("Array before removing element: " + num4);
-//remove element from index position 2
-num4.splice(2,1); //first parameter is index position to remove element, second parameter is number of elements to remove
-num4.splice(2,2);
-console.log("Array after removing element: " + num4);
+// let num4=[100,200,300,400,500,600];
+// console.log("Array before removing element: " + num4);
+// //remove element from index position 2
+// num4.splice(2,1); //first parameter is index position to remove element, second parameter is number of elements to remove
+// num4.splice(2,2);
+// console.log("Array after removing element: " + num4);
 
-//adding elements using splice method
-num4.splice(2,0,700); //first parameter is index position to add element, second parameter is number of elements to remove, third parameter is element to add
-num4.splice(3,0,800,900); //adding multiple elements
-console.log("Array after adding element: " + num4);
-num4.splice(2,2,111,222); //removing and adding elements together
-console.log("Array after removing and adding elements together: " + num4);
+// //adding elements using splice method
+// num4.splice(2,0,700); //first parameter is index position to add element, second parameter is number of elements to remove, third parameter is element to add
+// num4.splice(3,0,800,900); //adding multiple elements
+// console.log("Array after adding element: " + num4);
+// num4.splice(2,2,111,222); //removing and adding elements together
+// console.log("Array after removing and adding elements together: " + num4);
 // 
+
+//deep copy example
+let num5=[10,20,30,40,50];
+console.log("num5: " + num5);
+let num6=num5 //call num5 value copy in num6 with reference, ddep copy
+console.log("num5 before changing num6: " + num5);
+console.log("num6 before changing num6: " + num6);
+num6.push(60);
+console.log("num5 after changing num6: " + num5);
+console.log("num6 after changing num6: " + num6);
+
+//shallow copy example
+let num7 = num5.slice(); //slice method creates a new array and copies the elements
+console.log("num5 before changing num7: " + num5);
+console.log("num7 before changing num7: " + num7);
+num7.push(70);
+console.log("num5 after changing num7: " + num5);
+console.log("num7 after changing num7: " + num7);
