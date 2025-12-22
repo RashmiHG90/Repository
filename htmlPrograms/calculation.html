@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+    <script type="text/JavaScript">
+        function addFunction(){
+         console.log("Button clicked");
+         var num1 = document.getElementById("n1").value;
+         var num2 = document.getElementById("n2").value;
+         var sum = parseInt(num1) + parseInt(num2);
+         //console.log("Sum is: " + sum);
+          document.getElementById("n3").value = sum;
+          document.getElementById("output").innerHTML = sum;
+          document.getElementById("n1").value = "";
+          document.getElementById("n2").value = "";
+        }
+
+        function subFunction(){
+            var num1 = document.getElementsByName("num")[0].value;
+            var num2 = document.getElementsByName("num")[1].value;
+            var sub= eval(num1) - eval(num2);
+            document.getElementsByName("result")[0].value = sub;
+            document.getElementsByName("num")[0].value = "";  
+            document.getElementsByName("num")[1].value = "";
+
+        }
+        function update(){
+            let h2TagValue = document.getElementsByTagName("h2")[0].innerHTML;
+            console.log("Before update: " + h2TagValue);
+            document.getElementsByTagName("h2")[0].innerHTML = h2TagValue +"Parser";
+        }
+    </script>
+</head>
+<body>
+    <h2>DOM Hirarchy</h2>
+    1st number: <input type="text" id="n1" name="num"><br/>
+    2nd number: <input type="text" id = "n2" name = "num"><br/>
+    Sum of two numbers: <input type="text" id="n3" name = "result" readonly><br>
+    <div id = "output"></div>
+    <input type="button" value="add number" onclick="addFunction()">
+    <input type="button" value="sub number" onclick="subFunction()">
+    <input type="button" value="update" onclick="update()">
+</body>
+</html>
