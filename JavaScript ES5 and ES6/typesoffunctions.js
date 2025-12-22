@@ -50,30 +50,76 @@
 // }
 
 // console.log(largestNumber(50,20));
-
+//--------------------------------------------------------------------
 //callback function example
-function greetings(fname,callback){
-    return "welcome " +callback(fname);
+//normal function
+// function greetings(fname,callback){
+//     return "welcome " +callback(fname);
+// }
+// //expression style function
+// let maleInfo= function(fname){
+//     return "Mr. " + fname;
+// }
+// //arrow styel function
+// let femaleInfo = (fname)=>"Ms. " + fname;
+
+// let a =greetings("John",maleInfo);
+// console.log(a); 
+// console.log(greetings("Mary",femaleInfo));
+
+// //callback function example
+// function greetings(fname,abc){
+//     return "welcome " +abc(fname);
+// }
+
+// let ra =greetings("Raj ",function(fname){
+//     return "Mr. " + fname;
+// });
+// console.log(ra); 
+
+// console.log(greetings("reeta",  (fname)=>"Ms. " + fname));
+
+//--------------------------------------------------------------------
+//IIFE - Immediately Invoked Function Expression
+//(function_body)(function_call);
+// (function(){
+//     console.log("IIFE - Immediately Invoked Function Expression called");
+// })();
+
+// ((a,b)=>console.log(a+b))(10,20);
+// console.log("---------------------------");
+//----------------------------------------------------
+
+//closure example
+function outer(){
+    let n = 100;
+    function Inner(){
+        console.log("Value of n is: " + n);
+        n++;
+    }
+
+    return Inner; //outer function returns inner function
 }
 
-let maleInfo= function(fname){
-    return "Mr. " + fname;
+let c_inner = outer();
+c_inner();// we are calling inner function here
+c_inner();
+c_inner();
+
+//mutliple functions with closures
+function bank(){
+    let balance = 5000;
+    return{
+        deposit(amount){
+            balance += amount;
+            console.log("Amount deposited. New balance is: " + balance);
+        },
+        withdraw(amount){
+            balance -= amount;
+            console.log("Amount withdrawn. New balance is: " + balance);
+        }
+    }
 }
-
-let femaleInfo = (fname)=>"Ms. " + fname;
-
-let a =greetings("John",maleInfo);
-console.log(a); 
-console.log(greetings("Mary",femaleInfo));
-
-//callback function example
-function greetings(fname,abc){
-    return "welcome " +abc(fname);
-}
-
-let ra =greetings("Raj ",function(fname){
-    return "Mr. " + fname;
-});
-console.log(ra); 
-
-console.log(greetings("reeta",  (fname)=>"Ms. " + fname));
+let account = bank();
+account.deposit(2000);
+account.withdraw(1000);
