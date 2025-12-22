@@ -27,8 +27,10 @@
 
         }
         function update(){
+            //get the value of non editable tag like p, div, h1
             let h2TagValue = document.getElementsByTagName("h2")[0].innerHTML;
             console.log("Before update: " + h2TagValue);
+            //set the value of non editable tag like p, div, h1
             document.getElementsByTagName("h2")[0].innerHTML = h2TagValue +"Parser";
         }
     </script>
