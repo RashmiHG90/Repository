@@ -30,7 +30,3 @@ function stop(){
     clearInterval(inital);
     i=0;
 }
-
-function reset(){
-        inital=setInterval(start, 1000);
-}
