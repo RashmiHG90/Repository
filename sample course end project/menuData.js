@@ -1,10 +1,11 @@
 let cartInfo=[];
 const PRICE=100;
-let currentUser= sessionStorage.getItem("user")
-if(!currentuser){
-    alert("Please login!");
-    window.location.href="login.html";
-}
+// let emailId = document.getElementById("email").value
+// let currentUser= sessionStorage.getItem(emailId)
+// if(!currentuser){
+//     alert("Please login!");
+//     window.location.href="login.html";
+// }
 
 function searchItemData(){
     let mid = document.getElementById("mid").value
@@ -72,8 +73,8 @@ function updateQty(index,change){
 }
 
 function loadfakedata(){
-    let h1= document.createElement("p");
-    let user=sessionStorage.getItem("user");
+    let h1= document.createElement("p");  
+    let user= sessionStorage.getItem("user1")
     let h1TagValue = document.createTextNode(user);
     h1.appendChild(h1TagValue);
     document.getElementById("user").appendChild(h1)

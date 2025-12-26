@@ -18,18 +18,23 @@ function validate(){
       }
     } else{
         alert("Please register!")
+        document.getElementById("email").value=""
+        document.getElementById("passwordId").value=""
+
     }
     return false;
 }
 
 function register(){
     let emailId = document.getElementById("email").value
+    let username = document.getElementById("name").value
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (emailRegex.test(emailId)) {
     let passwordId = document.getElementById("passwordId").value
      if(emailId!=""){
         console.log(emailId);
         sessionStorage.setItem(emailId,passwordId)
+        sessionStorage.setItem("user1",username)
         alert("Registered successfully");
         return true;
     }else{
