@@ -24,6 +24,8 @@ function validate(){
 
 function register(){
     let emailId = document.getElementById("email").value
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (emailRegex.test(emailId)) {
     let passwordId = document.getElementById("passwordId").value
      if(emailId!=""){
         console.log(emailId);
@@ -33,6 +35,11 @@ function register(){
     }else{
          console.log(emailId);
         alert("Registeration failed , try again");
+        return false;
+    }
+
+    }else{
+        alert("Please enter a valid email address (e.g., name@example.com).");
         return false;
     }
 
