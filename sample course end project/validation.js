@@ -1,31 +1,39 @@
 function validate(){
-    alert("validating");
+
      let emailId = document.getElementById("email").value
-    alert("validation started" + emailId);
-    //let password = document.getElementById("passwordId").value
-    // if(emailId.length == 0){
-    //  alert ("Enter the email id")
-    //     return false;
-    // }    
+     let passwordId = document.getElementById("passwordId").value
+     let validemail = sessionStorage.getItem(emailId);
+    if(validemail){
+     let userPassword = sessionStorage.getItem(emailId);
+     console.log(userPassword);
 
-    let user1 = {emailId:"raj@gmail.com",password:"raj@123"}
-    let user2 ={emailId:"ravi@gmail.com",password:"ravi@123"}
-    let user3 ={emailId:"ramesh@gmail.com",passord:"ramesh@123"}
-     let users=[];
-     users.push(user1);
-     users.push(user2);
-     users.push(user3);
-
-
-    if(emailId=="admin@gmail.com"){
+     if(userPassword==passwordId){
         console.log(emailId);
         alert("successfully logged in");
-        sessionStorage.setItem("user","admin@gmail.com")
         return true;
-    }else{
+      }else{
          console.log(emailId);
         alert("login failed , try again");
         return false;
+      }
+    } else{
+        alert("Please register!")
     }
     return false;
+}
+
+function register(){
+    let emailId = document.getElementById("email").value
+    let passwordId = document.getElementById("passwordId").value
+     if(emailId!=""){
+        console.log(emailId);
+        sessionStorage.setItem(emailId,passwordId)
+        alert("Registered successfully");
+        return true;
+    }else{
+         console.log(emailId);
+        alert("Registeration failed , try again");
+        return false;
+    }
+
 }

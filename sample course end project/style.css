@@ -1,0 +1,69 @@
+body {
+    /* The path to your image */
+    background-image: url('websiteLoginBackground.jpg');
+
+    /* This prevents the image from repeating if it's too small */
+    background-repeat: no-repeat;
+
+    /* This centers the image */
+    background-position: center;
+
+    /* This ensures the image covers the entire screen */
+    background-size: cover;
+
+    /* This keeps the background fixed so it doesn't move when you scroll */
+    background-attachment: fixed;
+}
+
+.form-container { 
+    width: 20%; 
+    height: 40;
+    margin-left: 10px; /* Pushes it slightly away from the left edge */
+    margin-top: 50px;
+    padding: 30px; 
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px gray; 
+} 
+
+
+h2 { 
+    margin-left: 150px;
+    color: rgb(43, 55, 66); 
+} 
+ 
+label { 
+    display: block; 
+    margin: 10px 0 5px; 
+} 
+ 
+input[type="text"] { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+} 
+ 
+
+.button-style { 
+    /* Essential for the <a> tag to respect padding and height */
+    display: inline-block;
+    text-decoration: none; /* Removes the underline from the link */
+    text-align: center;
+    
+    background-color: rgb(43, 55, 66); 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    
+    /* Ensures both use the same font and size */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.button-style:hover { 
+    background-color: rgb(30, 40, 50); 
+    color: white; /* Ensures text stays white on hover */
+}
