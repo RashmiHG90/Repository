@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="menuData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body onload="loadfakedata()">
-    <h2>Welcome to the Dashboard</h2>
-    <input type="button" value = "Show Cart details" onclick="showCartData()">
-    <input type="button" value = "Show Menu items" onclick="loadfakedata()">
-    <br/>
-    Search Item Menu <br/>
-    <input type="number" id="mid"
-    onkeyup="searchItemData()">
-    <div id = "search-item"></div>
-    <hr>
-    <div id = "menu-item" ></div>
-    <div id="cart-item"></div>    
+<body onload="loadfakedata()" class="bg-gray-100 min-h-screen">
+    <span id="user"></span>
+    <button onclick="logout()"> Log out</button>
+  <div class="flex flex-col p-8">
+    <div class="">
+        <input type="button" value = "Show Cart details" onclick="showCartData()">
+        <input type="button" value = "Show Menu items" onclick="loadfakedata()">
+    
+        Search Item Menu <br/>
+        <input type="number" id="mid" onkeyup="searchItemData()">
+        <div id = "search-item"></div>
+        <button onclick="loadfakedata()">Menu Item</button>
+
+    </div>
+    <div class="">
+
+        <div id ="menu-item" class="flex flex-wrap">
+
+        </div>
+        <div id="cart-item">
+
+        </div>   
+        <div id="view-orders">
+
+        </div>
+
+    </div>
+  </div>
+   
 </body>
 </html>
