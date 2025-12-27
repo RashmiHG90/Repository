@@ -8,32 +8,52 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body onload="loadfakedata()" class="bg-gray-100 min-h-screen">
-    <span id="user"></span>
-    <button onclick="logout()"> Log out</button>
-  <div class="flex flex-col p-8">
-    <div class="">
-        <input type="button" value = "Show Cart details" onclick="showCartData()">
-        <input type="button" value = "Show Menu items" onclick="loadfakedata()">
-    
-        Search Item Menu <br/>
-        <input type="number" id="mid" onkeyup="searchItemData()">
-        <div id = "search-item"></div>
-        <button onclick="loadfakedata()">Menu Item</button>
-
+    <div class="p-4">
+    <div class="inline-block font-bold">Welcome</div>
+    <div class="inline-block font-bold" id="user"></div>
     </div>
-    <div class="">
 
+    <div class="flex flex-wrap items-center justify-start p-8 gap-4">
+        <input class="inline-block no-underline text-center bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" type="button" id= "showCart" value="Show Cart details" onclick="showCartData()">
+        
+        <input class="inline-block no-underline text-center bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" type="button" id= "showMenu"value="Show Menu items" onclick="loadfakedata()">
+    
+        <div class="flex items-center gap-2 ml-4">
+            <span class="font-medium">Search Item Menu:</span>
+            <input class="border border-gray-300 p-2 rounded-[5px] text-[14px]" type="number" id="mid" onkeyup="searchItemData()">
+        </div>
+        
+        <div id="search-item"></div>
+
+                <button class="inline-block no-underline text-center bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" onclick="logout()">Log out</button>
+    </div>
+
+        <!-- <div class="flex content-end p-8">
+        <input class = "inline-block no-underline text-center bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" type="button" value = "Show Cart details" onclick="showCartData()">
+        <input class = "inline-block no-underline text-center bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" type="button" value = "Show Menu items" onclick="loadfakedata()">
+        <button class ="inline-block no-underline text-center bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" onclick="logout()"> Log out</button>
+        <br>
+        Search Item Menu :<input class = "inline-block no-underline text-center bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" type="number" id="mid" onkeyup="searchItemData()">
+        <div id = "search-item"></div>
+        <button class="inline-block no-underline text-center bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" onclick="loadfakedata()">Menu Item</button>
+        </div> -->
+
+  <div class="flex items-start p-8">
+    
         <div id ="menu-item" class="flex flex-wrap">
-
         </div>
         <div id="cart-item">
-
-        </div>   
+           
+        </div>  
+         <div class="p-4">
+        <div class="inline-block font-bold">Total : </div>
+        <div class="inline-block font-bold" id="total"></div> 
         <div id="view-orders">
-
+        <div class="p-4">
+         <input class="inline-block no-underline bg-[#2b3742] text-white py-[10px] px-[20px] rounded-[5px] cursor-pointer text-[14px]" type="button" id= "payment" value="Proceed to Payment" onclick="payment()">
+        </div>
         </div>
 
-    </div>
   </div>
    
 </body>
