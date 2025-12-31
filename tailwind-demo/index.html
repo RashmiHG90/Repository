@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind UI Elements</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-red-100 p-6">
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Styling Essential UI Elements with Tailwind</h1>
+    </div>
+
+    <div class="mb-4"> 
+            <h2 class="text-2xl font-semibold mb-3">Buttons</h2> 
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Primary</button> 
+            <button class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg hover:bg-blue-400">Secondary</button> 
+            <button class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600">Danger</button> 
+        </div> 
+
+    <div class="mb-4">
+      <h2 class="text-2xl font-semibold mb-3">Dropdown</h2>
+      <details class="relative w-40">
+        <summary class="bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-600">Dropdown</summary>
+        <div class="absolute left-0 mt-2 w-full bg-white border border-gray-300 shadow-lg rounded-lg">
+         <a href="#" class="block px-4 py-2 hover:bg-gray-100">Option 1</a>
+         <a href="#" class="block px-4 py-2 hover:bg-gray-100">Option 2</a>
+         <a href="#" class="block px-4 py-2 hover:bg-gray-100">Option 3</a>
+        </div>
+      </details>
+
+    </div>
+    
+</body>
+</html>
